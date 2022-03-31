@@ -1,23 +1,19 @@
-const items=[
+const student=[
     {
-        sno:1,
-        name:"mobile"
+        score:80,
+        name:"Aman"
     },
     {
-        sno:2,
-        name:"tv"
+         score:70,
+        name:"Aakash"
     },
     {
-        sno:3,
-        name:"charger"
+         score:95,
+        name:"hari"
     },
     {
-        sno:4,
-        name:"ac"
-    },
-    {
-        sno:5,
-        name:"dvd"
+         score:98,
+        name:"Palak"
     },
     
 ];
@@ -26,8 +22,8 @@ function getItem(){
     
     setTimeout(()=>{
     let displayItem=""
-    items.forEach((item) => {
-        console.log(item)
+   student.forEach((student) => {
+        console.log(student)
     })
     }, 1000)
 }
@@ -37,7 +33,7 @@ function createItem(newItem){
     return new Promise(
         (resolve, reject) => {
             setTimeout(() =>{
-                items.push(newItem)
+               student.push(newItem)
                 let flag=true;
                 if(flag){
                     resolve();
@@ -52,4 +48,4 @@ function createItem(newItem){
 
 
 
-createItem({sno:6, name:"washing machine"}).then(getItem).catch(err=>console.log(err))
+createItem({sno:70, name:"Ram"}).then(getItem).catch(err=>console.log(err))
